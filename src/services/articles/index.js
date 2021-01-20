@@ -12,8 +12,8 @@ router.get("/", async (req, res, next) => {
         res.send(response);
     }
     catch (err) {
-        console.log(e);
-        res.status(500).send(e);
+        console.log(err);
+        res.status(500).send(err);
     }
 })
 

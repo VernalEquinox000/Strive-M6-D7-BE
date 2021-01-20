@@ -12,7 +12,7 @@ class Model {
             return response;
             
         } catch (error) {
-            throw new Error
+            throw new Error(error)
         }
     }
 
