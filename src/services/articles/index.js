@@ -61,4 +61,28 @@ router.delete("/id", async (req, res, next) => {
     }
 })
 
+/* router.post("/:id/reviews", async (req, res, next) => {
+  try {  */
+    /* const article = await ArticleModel.findByIdAndUpdate(
+      id,
+      {
+        $push: { reviews: req.body },
+      } */
+    
+    /* const reviewsArticle = await ArticleModel.findByIdAndUpdate(
+      req.params.id,
+      {
+        $push: {
+          reviews: {
+            ...req.body,
+          },
+        },
+      }
+    );
+    res.status(201).send(reviewsArticle);
+  
+  } catch (error) {
+    next(error)
+  }
+}) */
 module.exports = router;

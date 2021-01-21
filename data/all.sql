@@ -13,7 +13,7 @@ categories (
 	category_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR (50) NOT NULL,
 	img VARCHAR (100),
-	postedAt TIMESTAMP);
+	postedAt TIMESTAMP default NOW());
 
 CREATE TABLE
 articles (
@@ -24,8 +24,8 @@ articles (
     category INTEGER NOT NULL,
     author INTEGER NOT NULL,
 	cover VARCHAR(20),
-	postedAt TIMESTAMP,
-	modifiedAt TIMESTAMP,
+	postedAt TIMESTAMP default NOW(),
+	modifiedAt TIMESTAMP default NOW(),
       FOREIGN KEY(author) 
 	  REFERENCES authors(author_id),
       FOREIGN KEY(category) 
